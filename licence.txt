@@ -1,0 +1,7 @@
+This is an informal licence agreement. However, it is your only opertunity to reuse the code within this site without a written licence agreement. All rights reserved. 
+
+You can use the HTML, Javascript and CSS found within for any purpose as long as you do the following: 
+
+1- send me a tweet @gwybod to let me know that you've found this.
+2- smile
+
