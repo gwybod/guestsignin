@@ -1,0 +1,8 @@
+<form id="loginform" action="javascript:submitLogin();" method="post">
+  <input class="textbox" id="s1" type="text" name="name" placeholder="Fulll Name" required x-webkit-speech><br><br>
+  <input class="textbox" id="s2" type="tel" name="tel" placeholder="Telephone number" x-webkit-speech><br><br>
+  <input class="textbox" id="s3" type="email" name="emai" placeholder="Email Address" x-webkit-speech><br><br>
+  <input class="textbox" id="s4" type="text" inputmode="numeric" pattern="[0-9]*" name="number" placeholder="Visitor Card Number" required x-webkit-speech><br><br>  
+  <input class="button" id="loginsubmit" type="submit" value="Submit">
+</form>
+<button id="loginback" onclick="relo();">Back</button>

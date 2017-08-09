@@ -1,0 +1,4 @@
+<div>
+<button id='signin' onclick="gpr('GET','48jewd','bits/signin.bit','main')">Sign In</button>
+<button id='signout' onclick="gpr('GET','4mi34d','bits/signout.bit','main')">Sign Out</button>
+</div>

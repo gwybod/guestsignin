@@ -1,0 +1,5 @@
+<form method="post" action="javascript:submitLogout();">
+  <input id="d1" type="number" pattern="\d*" name="num" placeholder=" Card number" required><br><br>
+  <input class="button" id="logoutsubmit" type="submit" value="Submit">
+</form>
+<button id="logoutback" onclick="relo();">Back</button>

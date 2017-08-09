@@ -1,0 +1,33 @@
+<?php
+$name = $tel = $email = $number = "";
+$problem = False;
+
+function test_input($data) {
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	return $data;
+}      
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	$name = test_input($_POST["name"]);
+	$tel = test_input($_POST["tel"]);
+	$email = test_input($_POST["email"]);
+	$number = test_input($_POST["number"]);
+}
+echo '<form action=\'javascript:agreeTerms("'.$name.'","'.$tel.'","'.$email.'","'.$number.'");\'>'
+?>
+<div id="termsfieldset">
+<br>
+<div id="termsfieldsetheader">Important Health and Saftey information</div>
+<br>
+<p>
+	When you were given your visitor or contractor bage, you will have also been given a health and saftey card. This card contains imporant information about where to go in the event of an evacuation as wel as other important details. To confirm that you have read and understood this briefing card, please enter your visitor card number again here: 
+</p>	
+<p>
+<label:> Visitor Card Number:</label>
+<input type="number" pattern="[0-9]*" id="termsconfirm">
+</p>
+<br>
+</div>
+<input id="termssubmit" type="submit" class="button" value="I have read the terms">
+</div>
