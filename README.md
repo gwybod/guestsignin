@@ -1,5 +1,4 @@
 # guestsignin
 A HTML5/JS guest sign in webapp. 
 
-Wrote this and then looked up where things were going - Xhttp is dead and fetch is in, love it, everything here is useless. 
-new version on the way :)
+Updated to be a bit better uses service worker to work offline, except IOS still hasn't implimented this part of the spec - dispite promising they're on it. so, still useless. 
