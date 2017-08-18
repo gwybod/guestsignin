@@ -19,31 +19,10 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
     }
 }
 
-function gpr(requestType, payload, target, outputdiv, timeout = '5000'){
-    console.log("gpr", requestType, payload, target, outputdiv, timeout)
-    if ((requestType ==='')||(payload === '')||(target==='')||(outputdiv==='')) { return;}
-    var xhttp = new XMLHttpRequest();
-    xhttp.timeout = timeout;
-    xhttp.onreadystatechange = function() {switch(this.readyState){case 4: switch(this.status){ case 200: 
-				document.getElementById(outputdiv).innerHTML = this.responseText
-    }}}
-    switch(requestType){
-        case "POST":
-			xhttp.open('POST', target, true)
-			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
-			xhttp.send(payload)
-			break
-        case "GET":
-		    xhttp.open('GET', target + '?' + payload, true)
-		    xhttp.send()
-		    break
-    }
-}
-
-
-function grab(target, payload, requestType = 'GET', outputdiv = 'main', timeout = '5000'){
-    console.log("grab", requestType, payload, target, outputdiv, timeout)
-    if ((target==='')||(outputdiv==='')) { return;}
+function grab(target, payload = 'EMPTY', outputdiv = 'main', timeout = '5000'){
+    console.log("grab()",target, payload, outputdiv, timeout)
+    if (target==='') { return;}
+    if (payload=='EMPTY') { requestType = 'GET'; } else { requestType = 'POST'; }
     var x = new XMLHttpRequest();
     x.timeout = timeout;
     x.onreadystatechange = function() {switch(this.readyState){case 4: switch(this.status){ case 200: 
@@ -56,7 +35,7 @@ function grab(target, payload, requestType = 'GET', outputdiv = 'main', timeout 
 			x.send(payload)
 			break
         case "GET":
-		    x.open('GET', target + '?' + payload, true)
+		    x.open('GET', target, true)
 		    x.send()
 		    break
     }
