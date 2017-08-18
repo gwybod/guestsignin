@@ -1,17 +1,23 @@
-<html>
+html manifest="https://guestsignin.uk/appcache">
 <head><title>Guest Book</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Guest Sign-In">
+<link rel="apple-touch-icon" href="assets/icon-152x152.png">
+<link rel="manifest" href="signinapp.mf">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
-<script src="visitor.js"></script>
 </head>
-<body onload="getready();">
-	<header><div id="welcome" contenteditable="true" onchange="redefine();")></div>
-	</header>
-	<content>
-		<div id='main'><div class="message">Page Loading...</div></div>
-	</content>
-	<footer><div id="tag" contenteditable="true" onchange="redefine();"> </div> <footer>
+<body>
+        <header><div id="welcome" contenteditable="false")></div>
+        </header>
+        <content>
+                <div id='main'><div class="message">Page Loading...</div></div>
+        </content>
+        <footer><div id="footer" contenteditable="false"> </div> <footer>
+<script src="visitor.js"></script>
 </body>
 </html>
 
