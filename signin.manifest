@@ -1,0 +1,13 @@
+CACHE MANIFEST
+# v1
+sw.js
+visitor.js
+script.js
+style.css
+index.html
+bits/dologout.bit
+bits/dologin.bit
+bits/main.bit
+bits/signin.bit
+bits/signout.bit
+bits/terms.bit
